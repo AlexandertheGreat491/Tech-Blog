@@ -33,6 +33,16 @@ User.init(
         }
     },
     {
+        hooks: {
+            //sets up the beforeCreate lifecycle "hook" functionality
+            beforeCreate(userData) {
+                return bcrypt.hash(userData.password, 10).then(newUserData => {
+                    return newUserData
+                });
+            }
+        }
+    },
+    {
         sequelize,
         timestamps: false,
         freezeTableName: true,
