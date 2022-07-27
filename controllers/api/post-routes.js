@@ -29,3 +29,37 @@ router.get("/", (req, res) => {
       res.status(500).json(err);
     });
 });
+
+// GET route for post by id
+router.get("/:id", (req, res) => {
+  Post.findOne({
+    where: {
+      id: req.params.id,
+    },
+    attributes: ["id", "title", "body", "user_id"],
+    include: [
+      {
+        model: User,
+        attributes: ["id", "username", "email", "password"],
+      },
+      {
+        model: Comment,
+        include: {
+          model: User,
+          attributes: ["id", "username", "email", "password"],
+        },
+      },
+    ],
+  })
+    .then((dbPostData) => {
+      if (!dbPostData) {
+        res.status(404).json({ message: "No post found with this id!" });
+        return;
+      }
+      res.json(dbPostData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
