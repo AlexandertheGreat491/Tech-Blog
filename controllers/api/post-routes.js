@@ -100,3 +100,5 @@ router.put('/:id', (req, res) => {
         res.status(500).json(err);
     });
 });
+
+//DELETE route to remove a post from the database by id
