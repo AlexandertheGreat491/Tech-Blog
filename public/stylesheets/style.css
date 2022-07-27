@@ -30,11 +30,11 @@
     font-weight: bold;
     transition: background-color .1s;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0.3125em;
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: #ff5c33;
   }
   
   .post-list {
