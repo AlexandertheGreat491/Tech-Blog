@@ -63,3 +63,16 @@ router.get("/:id", (req, res) => {
       res.status(500).json(err);
     });
 });
+
+//POST route to create a new post
+router.post('/', (req, res) => {
+    Post.create({
+        title: req.body.title,
+        body: req.body.body
+    })
+    .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
