@@ -39,7 +39,8 @@ User.init(
                 newUserData.password = await bcrypt.hash(newUserData.password, 10);
                 return newUserData;
             }
-        }
+        },
+        //sets up the beforeUpdate lifecycle "hook" functionality
     },
     {
         sequelize,
