@@ -3,6 +3,8 @@ const sequelize = require("../config/connection");
 const { Post, User, Comment } = require("../models");
 
 router.get("/", (req, res) => {
+  console.log(req.session);
+
   Post.findAll({
     attributes: ["id", "title", "body", "user_id"],
     include: [
@@ -20,20 +22,20 @@ router.get("/", (req, res) => {
       },
     ],
   })
-  .then(dbPostData => {
-    //passes a single post object into the homepage template
-    //console.log(dbPostData[0]);
-    const posts = dbPostData.map(post => post.get({plain: true}));
-    res.render('homepage', {posts});
-  })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  });
+    .then((dbPostData) => {
+      //passes a single post object into the homepage template
+      //console.log(dbPostData[0]);
+      const posts = dbPostData.map((post) => post.get({ plain: true }));
+      res.render("homepage", { posts });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
-router.get('/login', (req, res) => {
-  res.render('login');
+router.get("/login", (req, res) => {
+  res.render("login");
 });
 
 module.exports = router;
