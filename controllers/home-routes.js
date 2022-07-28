@@ -1,17 +1,34 @@
-const router = require('express').Router();
-const sequelize = require('../config/connection');
-const {Post, User, Comment} = require('../models');
+const router = require("express").Router();
+const sequelize = require("../config/connection");
+const { Post, User, Comment } = require("../models");
 
-router.get('/', (req, res) => {
-    res.render('homepage', {
-        id: 1,
-        body: 'https://handlebarsjs.com/guide/',
-        title: 'Handlebar Docs',
-        comments: [{}, {}],
-        user: {
-            username: 'test_user'
-        }
-    });
+router.get("/", (req, res) => {
+  Post.findAll({
+    attributes: ["id", "title", "body", "user_id"],
+    include: [
+      {
+        model: Comment,
+        attributes: ["id", "body", "user_id", "post_id"],
+        include: {
+          model: User,
+          attributes: ["id", "username", "email", "password"],
+        },
+      },
+      {
+        model: User,
+        attributes: ["username"],
+      },
+    ],
+  })
+  .then(dbPostData => {
+    //passes a single post object into the homepage template
+    console.log(dbPostData[0]);
+    res.render('homepage', dbPostData[0].get({plain: true}));
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 module.exports = router;
