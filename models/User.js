@@ -39,19 +39,16 @@ User.init(
   },
   {
     hooks: {
-      //sets up the beforeCreate lifecycle "hook" functionality
-      async beforeCreate(userData) {
+      // set up beforeCreate lifecycle "hook" functionality
+      async beforeCreate(newUserData) {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },
-    },
-    //sets up the beforeUpdate lifecycle "hook" functionality
-    async beforeUpdate(updatedUserData) {
-      updatedUserData.password = await bcrypt.hash(
-        updatedUserData.password,
-        10
-      );
-      return updatedUserData;
+
+      async beforeUpdate(updatedUserData) {
+        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        return updatedUserData;
+      }
     },
     sequelize,
     timestamps: false,
