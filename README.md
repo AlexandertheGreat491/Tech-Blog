@@ -51,21 +51,42 @@ Step 9: Now you can run the app locally.
 
 Step 10: insert heroku link here
 
-
-
 ## Usage
 
 After following the installation steps above you will be ready to use the application. Please the screenshot to get an idea of what the application will look like in use.
 
 ## Credits
 
+Collaborators:
+
+[Alex Van Dyke](https://github.com/AlexandertheGreat491)
+
+Tutorials:
+
+[Dotenv](https://www.npmjs.com/package/dotenv)
+
+[HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp)
+
+[Jest](https://jestjs.io/docs/getting-started)
+
+[MySQL Reference Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-reference-guide)
+
+[Nodemon](https://www.npmjs.com/package/nodemon)
+
+[Node.js](https://nodejs.org/api/path.html)
+
+[Pixels to Ems Conversion](https://www.w3schools.com/tags/ref_pxtoemconversion.asp)
+
+[Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+
+[Sequelize](https://sequelize.org/v5/manual/getting-started.html)
+
+[Sequelize](https://www.npmjs.com/package/sequelize)
 
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
 
----
+[Link to license](./LICENSE)
 
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
 
