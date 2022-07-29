@@ -76,7 +76,7 @@
   }
   
   header {
-    border-bottom: 0.0625em solid #bfbfbf;
+    border-bottom: 0.1875em solid #bfbfbf;
     display: flex;
     justify-content: space-between;
     align-items: center;
