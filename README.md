@@ -55,7 +55,16 @@ Step 11: After taking time to understand the applications functionality please f
 
 ## Usage
 
-After following the installation steps above you will be ready to use the application. Please the screenshot to get an idea of what the application will look like in use.
+After following the installation steps above you will be ready to use the application. Please see the following screenshots to get an idea of what the application will look like in use.
+
+![Homepage-Screenshot](https://user-images.githubusercontent.com/64184203/181803432-c7c6a260-9a16-459c-b62f-535ae51b61fc.jpg)
+
+
+![Loggedin-Screenshot](https://user-images.githubusercontent.com/64184203/181803483-ed6d9a43-7186-4cb7-afe4-eb3ef3d69e6f.jpg)
+
+
+![Login-Screenshot](https://user-images.githubusercontent.com/64184203/181803551-081cb5c7-528b-4ca8-86c9-50002510d254.jpg)
+
 
 ## Credits
 
