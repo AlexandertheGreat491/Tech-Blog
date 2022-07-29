@@ -1,5 +1,15 @@
 # Tech-Blog
 
+## Table of Contents
+
+Please use the table of contents to assist you in navigating this README.
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+
 ## Description
 
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
