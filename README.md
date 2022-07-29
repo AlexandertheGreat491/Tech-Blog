@@ -12,25 +12,46 @@ Please use the table of contents to assist you in navigating this README.
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+The purpose of this project was to create a CMS-style blog site where users can make posts and comment on posts, while they are logged in to the application. I learned how to utilize the Handlebars engine to create the front end for an application based on the Model-View-Controller structure, which creates models with JavaScript and a MySQL database, creates a view using Handlebars.js, and is controlled through routes for the front end and back end and are protected by middleware.
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Please use the following steps to install the application on your local computer:
+
+Step 1: Access the [Public GitHub Repository](https://github.com/AlexandertheGreat491/Tech-Blog.git) and clone the code to your local computer.
+
+Step 2: In your terminal sign in to your MySQL by running:
+mysql -u <your username> -p
+
+Step 3: Enter your MySQL password when prompted and then run this command to create the tech_blog_cms_db database:
+
+source db/schema.sql
+
+Step 4: Then run the command:
+
+npm run seeds
+
+This will create the user, post, and comment tables, as well as add the values to the tables.
+
+Step 4: In your terminal run the command:
+
+npm i
+
+This will create the node_modules folder and give you access to all of the neceassary libraries.
+
+Step 5: Rename the .envEXAMPLE file to .env and fill it in with the correct information.
+
+Step 6: create a .gitignore file and add node_modules and .env to it.
+
+Step 7: In your terminal run npm install -g nodemon, if you don't already have nodemon installed globally.
+
+Step 8: Run the command in your terminal: nodemon
+
+Step 9: Now you can run the app locally.
+
+Step 10: insert heroku link here
+
+
 
 ## Usage
 
