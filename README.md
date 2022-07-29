@@ -49,7 +49,9 @@ Step 8: Run the command in your terminal: nodemon
 
 Step 9: Now you can run the app locally.
 
-Step 10: insert heroku link here
+Step 10: To run the app from Heroku please use the following link: [Tech Blog](https://stark-wildwood-04423.herokuapp.com/)
+
+Step 11: After taking time to understand the applications functionality please fork the repository, clone the forked version, login to Heroku, and create your app. Make sure to link your app to the main branch of your repository. Now you are able to create your own version of the application.
 
 ## Usage
 
